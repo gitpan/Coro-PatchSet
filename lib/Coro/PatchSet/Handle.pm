@@ -3,7 +3,7 @@ package Coro::PatchSet::Handle;
 use strict;
 use Coro::Handle;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 package # hide it from cpan
 	Coro::Handle::FH;
@@ -72,7 +72,7 @@ for 10 minutes (or until error/socket closing). But this behaviour is not compat
 which Coro::Handle tries to emulate. After this patch sysread will behave like sysread on system sockets. It will read
 >= 1 and <= $len bytes for you. Bytes readed count may be less than $len if sysread() may not read it without blocking.
 But will always be >= 1 (if there was no error or socket closing). So in the situation above sysread will read $len-1
-bytes and return.
+bytes and return. See t/05_handle_read.t
 
 =head1 SEE ALSO
 
