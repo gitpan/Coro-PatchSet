@@ -21,4 +21,4 @@ requires:
   Coro: 1
 resources:
   repository: https://github.com/olegwtf/p5-Coro-PatchSet
-version: 0.02
+version: 0.03
